@@ -1,0 +1,22 @@
+<table class="table">
+       <thead>
+
+       </thead>
+       <tbody>
+           <tr *ngFor="let product of carrello">
+               <td>{{ product.title }}</td>
+               <td>{{ product.purchasable_item.price }} €</td>
+               <td>
+                   <button class="btn btn-dark" (click)="rimuoviDalCarrello(product)">Rimuovi dal carrello </button>
+               </td>
+           </tr>
+       </tbody>
+       <tfoot>
+           <tr>
+               <td>Totale</td>
+               <td>{{ totale | number }} </td>
+           </tr>
+       </tfoot>
+</table>
+
+<a [routerLink]="['/checkout', 'stringa brutta']">Procedi al checkout</a>

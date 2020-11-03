@@ -1,0 +1,43 @@
+<div id="hero" class="row">
+
+    <nav class="col-10 offset-1">
+        <div class="row">
+            <div class="col-1 p-3">
+                <a href="/">
+                       <img src="/assets/household.svg" class="img-fluid text-white"> 
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="col-8 offset-2">
+      <h1 class="text-white">Washop</h1> 
+      <h4 class="text-white">
+          Troppo pigro per lavarti i panni da solo? <br>
+          Tu sporca, al resto ci pensiamo noi.
+      </h4>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-8 offset-2">
+        <div class="row">
+            <div class="col" *ngFor="let category of categories">
+                <span (click)="printCategoryProducts(category)" class="badge badge-secondary">{{ category }}</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-8 offset-2">
+        <div class="row">  
+             <div class="col-8">                       <!--  italiano il figlio, inglese il padre! -->
+                <app-products [prodotti]="filteredProducts" (aggiungiAlCarrello)="addToCart($event)"></app-products>
+            </div>
+            <div class="col-4">
+                   <app-cart [carrello]="cartItems" (aggiornaCarrello)="refreshCart($event)"></app-cart>
+            </div>
+        </div>
+    </div>
+</div>

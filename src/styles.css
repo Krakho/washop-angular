@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+
+#hero {
+    height: 70vh;
+    background: url('https://images.pexels.com/photos/2517866/pexels-photo-2517866.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-size: cover;
+    background-position: center;
+}
+
+#hgroup {
+
+   margin-top: 20vh;
+
+}
+
+body {
+    font-family: 'Noto Sans KR', arial, sans-serif;
+}
+
+h1 {
+    font-size: 3.5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+.p10h {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

@@ -1,0 +1,17 @@
+<table class="table">
+    <tbody>
+        <tr *ngFor="let prodotto of prodotti">
+            <td>
+                <span class="bold block">{{prodotto.title}}</span> <br>
+                <small class="block">{{prodotto.subtitle}}</small>
+            </td>
+            <td>z
+                {{ prodotto.purchasable_item.price || '-' }}
+            </td>
+
+         <td>
+<button class="btn btn-secondary btn-small" (click)="scatenaAggiungiAlCarrello(prodotto)">Aggiungi al carrello</button>
+        </td>
+        </tr>
+    </tbody>
+</table>
